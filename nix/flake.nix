@@ -12,14 +12,20 @@
                 let
                     pkgs = import nixpkgs { inherit system; };
                     libs = with pkgs; [
+                        raylib
                     ];
                     tools = with pkgs; [
+                        just
                         cmake
                         ninja
                         pkg-config
                         gcc
                         gdb
                         emscripten
+
+                        clang-tools
+                        cmake-language-server
+                        cmake-format
                     ];
                     common = {
                         buildInputs = libs;
