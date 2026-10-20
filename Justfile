@@ -10,12 +10,14 @@ build:
 
 run: build
     ./build/native-debug/game
+    @read
 
 release:
     cmake --build --preset native-release
 
 run-release: release
     ./build/native-release/game
+    @read
 
 test: build
     ctest --test-dir build/native-debug --output-on-failure
