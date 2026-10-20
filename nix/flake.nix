@@ -13,8 +13,11 @@
                     pkgs = import nixpkgs { inherit system; };
                     libs = with pkgs; [
                         raylib
+                        stdenv.cc.cc.lib
                     ];
                     tools = with pkgs; [
+                        cmake
+                        mold
                         just
                         cmake
                         ninja
